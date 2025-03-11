@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 // Desafio Super Trunfo - Países
 // Tema 1 - Cadastro das Cartas
@@ -30,9 +31,11 @@ int main() {
     printf("----------------------------------\n");
     printf("Estado (Apenas uma letra de 'A' a 'H'): ");
     scanf(" %c",&estado1);
+    getchar(); // Consome o '\n' do buffer
 
     printf("Cidade: ");
     fgets(cidade1, 50, stdin);
+    cidade1[strcspn(cidade1, "\n")] = '\0'; // Remove o '\n' do final
     
     printf("População (habitantes): ");
     scanf("%d", &populacao1);
@@ -51,9 +54,11 @@ int main() {
     printf("----------------------------------\n");
     printf("Estado (Apenas uma letra de 'A' a 'H'): ");
     scanf(" %c", &estado2);
+    getchar(); // Consome o '\n' do buffer
 
     printf("Cidade: ");
     fgets(cidade2, 50, stdin);
+    cidade2[strcspn(cidade2, "\n")] = '\0'; // Remove o '\n' do final
     
     printf("População (habitantes): ");
     scanf("%d", &populacao2);
