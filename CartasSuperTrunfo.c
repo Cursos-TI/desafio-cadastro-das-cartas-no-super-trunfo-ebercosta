@@ -13,7 +13,7 @@ int main() {
     /*  Declaração de variáveis */
     char estado1, estado2, cod_carta1, cod_carta2, cidade1[50], cidade2[50];
     int populacao1, populacao2, pt1, pt2;
-    float area1, area2, pib1, pib2;
+    float area1, area2, pib1, pib2, densidade_populacional1, densidade_populacional2, pib_per_capita1, pib_per_capita2;
 
     /*  Onboarding */
     printf("\033[H\033[J"); // Limpa a tela
@@ -88,6 +88,8 @@ int main() {
     printf("Área: %.2f km²\n", area1);
     printf("PIB: R$ %.2f\n", pib1);
     printf("Número de Pontos turísticos: %d\n", pt1);
+    printf("Densidade Populacional: %.2f habitantes/km²\n", (float) populacao1 / area1);
+    printf("PIB per Capita: R$ %.2f\n", pib1 / populacao1);
 
     printf("\nCARTA 02\n");
     printf("---------\n");
@@ -98,6 +100,8 @@ int main() {
     printf("Área: %.2f km²\n", area2);
     printf("PIB: R$ %.2f\n", pib2);
     printf("Número de Pontos turísticos: %d\n", pt2);
+    printf("Densidade Populacional: %.2f habitantes/km²\n", (float) populacao2 / area2);
+    printf("PIB per Capita: R$ %.2f\n", pib2 / populacao2);
 
     return 0;
 }
